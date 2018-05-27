@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scrapped Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <style>
+    body{
+      background-color: #272828;
+      color: whitesmoke;
+      font-family: Quicksand;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    nav{
+      font-family: Helvetica;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    .row .input-field input:focus {
+      border-bottom: 1px solid #42e5f4 !important;
+      box-shadow: 0 1px 0 0 #42e5f4 !important
+
+      }
+    ::selection {
+      background: #a7ffeb  ;
+      }
+    ::-moz-selection {
+      background: #a7ffeb  ;
+      }
+    </style>
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </head>
+  <body id="app" style="display: flex; min-height: 100vh; flex-direction: column;">
+    <header>
+      <nav class="" style="background: linear-gradient(to right, #ce1ace, #9c1cd8); ">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Logo Here</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a class="tablinks" onclick="openTab(event, 'tasks')"><b>Tasks</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'ctasks')">Create Tasks</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'settings')">Settings</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'profile')">Profile Creation</b></a></li>
+          </ul>
+          <ul class="right">
+            <li><a id="close"><i class="large material-icons">close</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+      <main>
+        <div class="container">
+          <table>
+            <tr>
+              <th>Task ID</th>
+              <th>Product</th>
+              <th>Profile</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </table>
+          <!--End Container-->
+        </div>
+        <!--End Body-->
+      </main>
+      <footer class="page-footer" style="background: transparent;">
+        <div class="container">
+          <div class="row">
+            <div class="col s6">
+              <button class="btn blue" type="submit" id="importTask">Import Tasks
+                <i class="material-icons right">archive</i>
+              </button>
+              <button class="btn blue" type="submit" id="exportTask">Export Tasks
+                  <i class="material-icons right">arrow_forward</i>
+                </button>
+              </div>
+              <div class="right-align">
+                <button class="btn green" type="submit" id="startAllTask">Start Tasks
+                  <i class="material-icons right">play_circle_outline</i>
+                </button>
+                <button class="btn red" type="submit" id="stopAllTask">Stop Tasks
+                  <i class="material-icons right">stop</i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2018 Atom Bots
+              <a class="grey-text text-lighten-4 right" href="https://twitter.com/grxyl">designed by grxy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
