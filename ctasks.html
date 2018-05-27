@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <style>
+    body{
+      background-color: #272828;
+      color: whitesmoke;
+      font-family: Quicksand;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    nav{
+      font-family: Helvetica;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    input{
+      color: whitesmoke;
+    }
+    .browser-default{
+      background-color: #272828;
+      color: whitesmoke
+    }
+    .row .input-field input:focus {
+      border-bottom: 1px solid #42e5f4 !important;
+      box-shadow: 0 1px 0 0 #42e5f4 !important
+
+      }
+    ::selection {
+      background: #a7ffeb  ;
+      }
+    ::-moz-selection {
+      background: #a7ffeb  ;
+      }
+    </style>
+  </head>
+  <body id="app">
+    <header>
+      <nav class="" style="background: linear-gradient(to right, #3a7bd5, #3a6073); ">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Logo Here</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="tasks.html"><b>Tasks</a></li>
+            <li><a href="ctasks.html">Create Tasks</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="profile.html">Profile Creation</b></a></li>
+          </ul>
+          <ul class="right">
+            <li><a id="close"><i class="large material-icons">close</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row">
+        <div class="container">
+          <h3 class="center-align">Create Tasks</h3>
+          <div class="col s12">
+            <label>Region</label>
+            <select class="browser-default" id="region">
+              <option value="" disabled selected>Choose Region</option>
+              <option value="us">US</option>
+              <option value="uk">UK</option>
+              <option value="eu">EU</option>
+            </select>
+          </div>
+          <div class="col s6">
+            <input class="center-align" style="border-bottom: 1px solid white;" type="text" id="keyword" placeholder="Keywords">
+          </div>
+          <div class="col s6">
+            <label>Category</label>
+            <select class="browser-default" id="category">
+              <option value="" disabled selected>Choose Category</option>
+              <option value="accessories">Accessories</option>
+              <option value="bags">Bags</option>
+              <option value="hats">Hats</option>
+              <option value="jackets">Jackets</option>
+              <option value="pants">Pants</option>
+              <option value="shirts">Shirts</option>
+              <option value="shoes">Shoes</option>
+              <option value="shorts">Shorts</option>
+              <option value="sweatshirts">Sweatshirts</option>
+              <option value="tshirts">T-Shirts</option>
+              <option value="topssweaters">Tops-Sweaters</option>
+              <option value="skate">Skate</option>
+              <option value="all">All</option>
+              <option value="new">New</option>
+            </select>
+          </div>
+          <div class="col s6">
+            <input class="center-align" style="border-bottom: 1px solid white;" type="text" id="color" placeholder="Color">
+          </div>
+          <div class="col s6">
+            <label>Size</label>
+            <select class="browser-default" id="size">
+              <option value="" disabled selected>Choose Size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="xlarge">X-Large</option>
+            </select>
+          </div>
+          <div class="container">
+              <div class="col s12">
+                <input class="center-align" style="border-bottom: 1px solid white;" type="number" id="qty" placeholder="Quantity">
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer" style="background: transparent;">
+      <div class="container">
+        <div class="row">
+          <div class="center-align">
+            <button class="btn green" type="submit" id="stopAllTask">Save Task(s)
+              <i class="material-icons right">save</i>
+            </button>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2018 Atom Bots
+          <a class="grey-text text-lighten-4 right" href="">designed by grxy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
